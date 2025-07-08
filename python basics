@@ -1,0 +1,138 @@
+l=[2,3,1,4,5]
+l.append(6)
+print(l)
+l.insert(2,"harsh")
+print(l)
+l.pop(6)
+print(l)
+l.remove("harsh")
+print(l)
+b=l.sort()
+print(b)
+
+c=l.copy()
+print(c)
+d=l.clear()
+print(l)
+
+d={"name":"Harsh", "age":22}
+d.keys()
+d.values()
+e=d.items()
+print(e)
+g=d.get(19 , "not found")
+print(g)
+d.update({"college":"acro"})
+print(d)
+
+str=" Harshvardhan Singh Dewada "
+str.lower()
+print(str)
+
+str.strip()
+print(str)
+d=str.replace("Singh","Govind Singh")
+print(d)
+e=d.split()
+print(e)
+
+set={3,6,1,8,9}
+set.add(45)
+print(set)
+s2={3,4,5,6,0}
+s3=s2.difference(set)
+print(s3)
+s4=s2.intersection(set)
+print(s4)
+
+s5=s2.union(set)
+print(s5)
+#update and union are somewhat similar
+
+s5.update()
+print(s5)
+     
+
+
+
+
+l=[]
+value=input("enter the name")
+l.append(value)
+age=int(input("age"))
+l.append(age)
+role=input("ente the role")
+l.append(role)
+print(l)
+d1={}
+d2={}
+d3={}
+d1.update({"name":value})
+d2.update({"age":age})
+d3.update({"role":role})
+l.append(d1)
+l.append(d2)
+l.append(d3)
+l.pop(0)
+l.pop(0)
+l.pop(0)
+print(l)
+
+
+#Exerice 2
+str=input("enter your mail id")
+A=print("correct id " ,str.endswith("com"))
+if A==True:
+ l=str.split("@")
+ print(l[-1])
+else :
+ print("type error")
+    
+ 
+ 
+ #exerice 1   
+str=input("enter the string")
+print(str)
+
+d=str.lower()
+print(d)
+
+e=d.strip()
+print(e)
+f=" "
+l=["@","-","_","%","!","<",">","(",")","*","&","^","+","=","#","$"]
+for ch in e:
+ if ch not in l:
+  f= f +ch
+  
+  
+print(f)
+
+
+  
+l=[1,2,3]
+l2=[6,7]
+l3=l + l2
+print(l3)
+l=[]
+
+
+
+l=[1,2,3,1,3,"hash"]
+
+dict={}
+
+for item in l:
+    if item in dict :
+        dict[item]+= 1
+        
+    else:
+        dict[item]=1
+    
+print(dict)
+
+
+#exercise
+str="name:harsh , age:19"
+a=dict(item.split(":") for item in str.split(","))
+print(a)
