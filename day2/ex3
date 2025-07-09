@@ -1,0 +1,8 @@
+# Write a custom implementation of map() to transform a list of temperatures from Celsius to Fahrenheit.
+
+
+l=[98, 103, 99]
+
+l2=map(lambda x:x*9/5 + 32 ,l)
+print(list(l2))
+
