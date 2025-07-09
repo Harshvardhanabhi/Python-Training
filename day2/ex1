@@ -1,1 +1,18 @@
+l=[
+   ["  harsh ",None,"ujjain"],["varun",None,"nagda"]]
 
+def clean(l):
+    n=len(l)
+    for i in range(n):
+        for j in range(len(l[i])):
+            
+            if l[i][j] is None:
+                l[i][j] =0 
+                   
+    print(l)   
+clean(l) 
+# to clean a list of list
+
+    
+
+ 
