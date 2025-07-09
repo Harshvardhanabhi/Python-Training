@@ -1,0 +1,23 @@
+#list comprehension
+l=[2,3,"harsh",5]
+
+l1 = [x*2 for x in l]
+print(l1)
+
+
+#dictinary comprehension
+d1={num:num*2 for num in range(0,5)}
+print(d1)
+
+n=4
+if n%2==0:
+    if n<5 and n>2:
+        print("not weird")
+    if n >6 and n<20:
+        print("weird")
+    if n>20:
+        print("not weird")
+if n%2!=0:
+    print("weird")
+    
+    
