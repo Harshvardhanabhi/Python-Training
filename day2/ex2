@@ -1,0 +1,23 @@
+# to emoves empty strings.	
+Trims whitespace.
+Converts numeric strings to integers.
+
+l=["harsh"," ","   varun  ","123"," "]
+l1=[]
+
+def clean(l):
+    for i in l:
+        
+        i=i.strip()
+        
+        if i=="":
+            continue
+            
+        if i.isdigit():
+            l1.append(int (i))
+             
+        else:
+            l1.append(i)   
+             
+    print(l1)
+clean(l)
