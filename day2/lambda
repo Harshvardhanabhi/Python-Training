@@ -1,0 +1,16 @@
+# lambda func
+
+a=lambda x,y : x*y
+print(a(4,5))
+
+add=lambda x,y,z,a: x+y+z+a
+print(add(1,2,3,4))
+
+#using lamnda func inside func
+def func(n,add):
+  addition=add(n)
+  res= n*n
+  return res,addition
+add=lambda n: n+n
+
+result=func(add=add,n=5)
