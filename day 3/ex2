@@ -1,0 +1,11 @@
+try:
+    with open("hrsh.txt","r") as f:
+        a=f.read()
+        print(a)
+except FileNotFoundError:
+    print("file not found")
+else:
+    print("file found")
+finally:
+    print("end")
+  
