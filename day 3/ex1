@@ -1,0 +1,24 @@
+with open("day3ex1.txt","r+") as f:
+    
+    b=f.readlines()
+    print(b)
+  
+
+count1=0
+count=0
+
+for i in b:
+    for j in i.split(" "):
+       if j =="ERROR":
+        count+=1
+       if j=="WARNING":
+        count1+=1
+d=print("ERROR",count)
+e=print("WARNING",count1)
+
+
+d={"ERROR":count,"WARNING":count1}
+import json
+with open("output.json", "w") as file:
+    
+ json.dump(d,file)
