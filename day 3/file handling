@@ -1,0 +1,30 @@
+# #to edit a file
+file =open("harsh.txt","w")
+content=file.write("I m varun")
+file.close()
+
+# #to append 
+file= open("harsh.text","a")
+
+d =file.write(" Harshvardhan")
+file.close()
+
+
+# #create a sample file
+file = open("varun.txt","w")
+file.write("varun purohit ")
+file.write("im from nagda")
+file.close()
+
+
+# #to read some contents
+file = open("varun.txt","r")
+f=file.read(5)
+file.close()
+print(f)
+
+#using with and readlines
+with open("varun.txt","r") as f:
+ line=f.readlines()
+ print(line)
+
