@@ -1,0 +1,34 @@
+import json
+
+customer_info = {
+    "customer_id": "C12345",
+    "name": "Alice Smith",
+    "email": "alice.smith@example.com",
+    
+}
+
+# Open the file in write mode ('w')
+with open("customer_data.json", "w") as file:
+    
+ json.dump(customer_info, file, indent=4) 
+# to read a json file 
+with open("customer_data.json", "r") as file:
+ d=json.load(file)
+ print(d)
+#to convert a json str into dic
+
+import json
+
+json_string = '{"name": "Bob", "age": 30}'
+data = json.loads(json_string)
+print(data) 
+print(data["name"])  # Accessing data like a dictionary
+
+
+import json
+json_string = {"name": "Bob", "age": 30}
+d2=json.dumps(json_string)
+print(d2)
+with open("customer_data.json","a") as f:
+    json.dump(d2,f)
+    
