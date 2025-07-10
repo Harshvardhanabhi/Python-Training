@@ -1,0 +1,17 @@
+
+import csv
+
+header = ['Name', 'Age', 'City']
+data = [{'Name': 'Alice', 'Age': 30, 'City': 'New York'},
+        {'Name': 'Bob', 'Age': 25, 'City': 'London'}]
+
+with open('output.csv', 'w', newline='') as file:
+    csv_writer = csv.DictWriter(file, fieldnames=header)
+    csv_writer.writeheader()
+    csv_writer.writerows(data)
+import csv
+
+with open('output.csv', 'r') as file:
+     csv_reader = csv.reader(file)
+     for line in csv_reader:
+      print(line)
