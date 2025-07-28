@@ -1,0 +1,64 @@
+# class animal :
+#     def __init__(self, n,age):
+#         self.name = n
+#         self.__age = age
+#     def d_name(self) :
+#         print(f"name is {self.name}") 
+#     @property
+    
+#     def age(self):
+#         if self.__age is None:
+#             print("value os none")
+            
+#         else:
+#             return self.__age
+   
+#     @age.setter  # The setter for the 'age' property must be named 'age'
+#     def age(self, value):
+#         """Setter for the 'age' property with validation."""
+#         if value is None:
+#             self.__age = None
+#         elif isinstance(value, int) and value >= 0:
+#             self.__age = value
+#         else:
+#             print("Invalid age value. Age must be a non-negative integer or None.")
+# animal1= animal('rocky',None)
+# animal1.d_name()
+# animal1.age=19
+# print(animal1.age)
+
+
+
+
+class Circle:
+    def __init__(self, radius):
+        self._radius = radius # Using underscore for internal attribute
+        
+    def perimeter(self):
+        """Calculates and returns the perimeter of the circle."""
+        # Access the radius using the property, which internally gets _radius
+        return 2 * 3.14 * self.radius 
+    
+    @property 
+    def radius(self): 
+        """The radius property."""
+        return self._radius
+
+    @radius.setter 
+    def radius(self, value):
+        
+        self._radius = value
+    @radius.getter
+    
+    def radius(self):
+        return self._radius
+# Usage
+c = Circle(10)
+print(f"Initial radius: {c.radius}") # Accesses the getter
+print(f"Initial perimeter: {c.perimeter()}") # Correctly calls and prints t
+
+
+  
+c.radius=15
+print(c.radius)
+print(f'r = {c.radius} perimter is {c.perimeter()}')
