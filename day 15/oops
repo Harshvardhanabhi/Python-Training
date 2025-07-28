@@ -1,0 +1,237 @@
+# class animal:
+#     def __init__(self,n, o):
+#         self.name = n 
+#         self.occupation =o
+        
+    
+# dog= animal('rocky', 'bark')
+
+# print(dog.name)        
+
+
+# class animal:
+    
+#     name = ' '
+#     occupation =' '
+        
+    
+# dog= animal()
+# dog.name='rocky'
+# dog.occupation='bite'
+# print(dog.occupation)        
+
+
+
+# class Dog:
+#     def __init__(self, name):
+#         self.name = name
+
+#     def display_name(self):
+#         print(f"Dog's Name: {self.name}")
+
+# class Labrador(Dog):  # Single Inheritance
+#     def sound(self):
+#         print("Labrador woofs")
+# lab = Labrador("Buddy")
+# lab.display_name()
+# lab.sound()
+
+# multi level inheritance
+# class Dog:
+#     def __init__(self, name):
+#         self.name = name
+
+#     def display_name(self):
+#         print(f"Dog's Name: {self.name}")
+
+# class Labrador(Dog):  # Single Inheritance
+#     def sound(self):
+#         print("Labrador woofs")
+        
+        
+        
+# class rocky(Labrador):
+#     def color(self,color):
+#         print(f"color is {color}")
+    
+# lab =rocky('sheru')
+# class animal:
+#     def __init__(self,n, o):
+#         self.name = n 
+#         self.occupation =o
+        
+    
+# dog= animal('rocky', 'bark')
+
+# print(dog.name)        
+
+
+# class animal:
+    
+#     name = ' '
+#     occupation =' '
+        
+    
+# dog= animal()
+# dog.name='rocky'
+# dog.occupation='bite'
+# print(dog.occupation)        
+
+
+
+# class Dog:
+#     def __init__(self, name):
+#         self.name = name
+
+#     def display_name(self):
+#         print(f"Dog's Name: {self.name}")
+
+# class Labrador(Dog):  # Single Inheritance
+#     def sound(self):
+#         print("Labrador woofs")
+# lab = Labrador("Buddy")
+# lab.display_name()
+# lab.sound()
+
+# multi level inheritance
+# class Dog:
+#     def __init__(self, name):
+#         self.name = name
+
+#     def display_name(self):
+#         print(f"Dog's Name: {self.name}")
+
+# class Labrador(Dog):  # Single Inheritance
+#     def sound(self):
+#         print("Labrador woofs")
+        
+        
+        
+# class rocky(Labrador):
+#     def color(self,color):
+#         print(f"color is {color}")
+    
+# lab =rocky('sheru')
+
+# lab.display_name()
+# lab.sound()
+# lab.color('white')
+
+# multiple inheritance
+
+# class A:
+#     def greet(self):
+#         print("Hello from A")
+
+# class B(A):
+#     def greet(self):
+#         print("Hello from B")
+
+# class C(A):
+#     def greet(self):
+#         print("Hello from C")
+
+# class D(B, C):
+#     pass # No explicit override for greet in D
+
+# # Create an instance of D
+# d_instance = D()
+# d_instance.greet()
+
+
+# access specifier
+
+class Dog:
+    def __init__(self, name,age , b):
+        self.name = name
+        self._breed= b
+        self.__age=age
+        
+    def display_name(self):
+        print(f"Dog's name: {self.name}")
+    def age(self):
+        print(f"Dog's age: {self.__age}")
+class cute(Dog):
+    
+    def type(self):
+        print(f"breed is {self._breed}")
+        
+    def get_age(self):
+        return self.__age
+     
+    def set_age(self, age):
+        if age > 0:
+            self.__age = age
+        else:
+            print("Invalid age!")
+
+# Example Usage
+# age1= Dog('cute',13,'pome')
+# age1.age()
+
+dog1=cute("cute",13,'pome')
+dog1.display_name()
+dog1.set_age(6)
+dog1.type()
+print(f'correted age is {dog1.get_age()}')
+# lab.display_name()
+# lab.sound()
+# lab.color('white')
+
+# multiple inheritance
+
+# class A:
+#     def greet(self):
+#         print("Hello from A")
+
+# class B(A):
+#     def greet(self):
+#         print("Hello from B")
+
+# class C(A):
+#     def greet(self):
+#         print("Hello from C")
+
+# class D(B, C):
+#     pass # No explicit override for greet in D
+
+# # Create an instance of D
+# d_instance = D()
+# d_instance.greet()
+
+
+# access specifier
+
+class Dog:
+    def __init__(self, name,age , b):
+        self.name = name
+        self._breed= b
+        self.__age=age
+        
+    def display_name(self):
+        print(f"Dog's name: {self.name}")
+    def age(self):
+        print(f"Dog's age: {self.__age}")
+class cute(Dog):
+    
+    def type(self):
+        print(f"breed is {self._breed}")
+        
+    def get_age(self):
+        return self.__age
+     
+    def set_age(self, age):
+        if age > 0:
+            self.__age = age
+        else:
+            print("Invalid age!")
+
+# Example Usage
+# age1= Dog('cute',13,'pome')
+# age1.age()
+
+dog1=cute("cute",13,'pome')
+dog1.display_name()
+dog1.set_age(6)
+dog1.type()
+print(f'correted age is {dog1.get_age()}')
