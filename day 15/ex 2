@@ -1,0 +1,24 @@
+class Truck:
+    def __init__(self,f):
+     self.__fuel = f
+    def set_limit(self,value):
+        
+     if self.__fuel>value:
+         print("value error")
+     else:
+         print(f"the fuel is {self.__fuel}")
+ 
+    @property
+    def fuel_level(self):
+      return self.__fuel
+    @fuel_level.setter
+    def fuel_level(self,value):
+      self.__fuel =value
+      
+    
+      
+truck1=Truck(50)
+truck1.fuel_level=70
+
+print(truck1.fuel_level) # 
+truck1.set_limit(100)
