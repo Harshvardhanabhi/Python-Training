@@ -1,0 +1,46 @@
+# # print(dir(int))
+
+
+# class Number:
+#     def __init__(self, value):
+#         self.value = value
+
+#     def __sub__(self, other):
+#         # Access the 'value' attribute of the 'other' Number object
+#         sub_result = self.value - other.value
+#         # Return a new Number object with the result
+#         return Number(sub_result)
+    
+#     def __str__(self):
+#         """
+#         Adding a __str__ method to get a readable output when printing.
+#         """
+#         return str(self.value)
+
+# n1 = Number(10)
+# n2 = Number(6)
+
+# # Perform subtraction using the overloaded operator
+# result = n1 - n2 
+
+# print(result) # Output: 4
+
+
+
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __repr__(self):
+        return f"Point({self.x}, {self.y})"
+
+# Create a Point object
+p1 = Point(3, 4)
+
+# Get the representation (uses __repr__)
+print(repr(p1)) 
+
+# Recreate the object using eval()
+p2 = eval(repr(p1))
+print(f"Recreated object: {p2}") 
