@@ -1,0 +1,28 @@
+# class Product:
+#     total_products = 0 # Class variable
+
+#     def __init__(self, name, price):
+#         self.name = name
+#         self.price = price
+#         # Increment the class variable when a new instance is created
+#         Product.total_products += 1 
+#     @classmethod
+#     def count(cls ):
+     
+#      return cls.total_products
+    
+# p1=Product('box',25)
+# p2=Product('scale',56)
+
+# print(f'total producst are {Product.count()}')
+
+class Animal:
+    @classmethod
+    def get_species_name(cls):
+        return "Animal"
+
+class Dog(Animal):
+    # ... (add instance methods/attributes for Dog)
+    pass 
+
+print(Dog.get_species_name())
