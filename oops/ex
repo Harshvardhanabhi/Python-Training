@@ -1,0 +1,47 @@
+# Create a base class Vehicle, with common attributes like plate_no, fuel_type.
+
+
+# Inherit Truck and Van from Vehicle.
+
+
+# Override the is_overloaded() method for each type.
+
+
+
+
+class v:
+ def __init__(self, plate_no,fuel_type,c):
+  self.plate_no = plate_no
+  self.fuel_type= fuel_type
+  self.capacity=c
+ def is_overloaded(self):
+  
+    return f"the capacity for vechicle is {self.capacity}"
+  
+class truck(v):
+   
+    def is_overloaded(self):
+      max_load = 2000
+      if self.capacity > max_load:
+       return 'truck overload'
+      else :
+        return f"for truck the capacity is {self.capacity}"
+class van(v):
+   
+    def is_overloaded(self):
+      max_load = 1000
+      super().is_overloaded
+      if self.capacity>max_load:
+       return 'van overload'
+      else :
+        return f"the van the capacity is {self.capacity}"
+    
+van1 = van("VAN456", "Petrol", 1200)
+a=van1.is_overloaded()
+print(a)
+
+truck1=truck('merced', 'diesel', 1300)
+print(truck1.is_overloaded())
+
+vech1=v('dsdas','sds',400)
+print(vech1.is_overloaded())
