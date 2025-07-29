@@ -1,0 +1,27 @@
+# Define a Truck class with attributes: location, load_capacity, driver.
+
+
+# Create multiple instances and print their properties.
+
+
+# Add a method is_overloaded(current_weight).
+
+class truck:
+    
+    
+    def __init__(self, location, load_capacity, driver,load):
+        self.location=location
+        self.load_capacity=load_capacity
+        self.driver=driver
+        self.load=load
+        
+    def overload(self):
+        if self.load_capacity <self.load :
+            print('overweight')
+        else:
+            print(f'load capacity is {self.load_capacity}')
+truck1=truck('nagda', 600,'harsh', 700)
+truck1.overload()
+print(truck1.location)
+truck2=truck('nagda', 400,'harsh', 300)
+truck2.overload()
