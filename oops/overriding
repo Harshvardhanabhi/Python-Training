@@ -1,0 +1,46 @@
+tax = 200
+pf = 500
+
+class Employee:
+    def get_salary(self): 
+        return f"Base salary is {self.base_salary}" 
+
+class Cut(Employee):
+    def get_salary(self, tax_amount, pf_amount): 
+        in_hand = self.base_salary - tax_amount - pf_amount 
+      
+        return in_hand
+
+e1 = Cut()
+e1.base_salary = 4000  
+
+e1.get_salary(tax, pf)
+
+
+
+class Animal:
+    def speak(self):
+        print("This animal makes a sound.")
+
+class Dog(Animal):
+    def speak(self):
+        super().speak()  # Calls Animal's speak method
+        print("The dog barks: Woof woof!")
+
+dog_obj = Dog()
+dog_obj.speak()
+
+
+
+class Parent:
+    def __init__(self, name):
+        self.name = name
+        print(f"Parent initialized: {self.name}")
+
+class Child(Parent):
+    def __init__(self, name, age):
+        super().__init__(name)  # Calls Parent's __init__
+        self.age = age
+        print(f"Child initialized: {self.name}, Age: {self.age}")
+
+child_obj = Child("Alice", 10)
