@@ -1,0 +1,23 @@
+class truck:
+    count = 0
+    def __init__(self,name):
+        self.name = name
+        
+        
+        truck.count +=1
+        
+        
+    @classmethod
+    def counter(cls):
+        
+        return cls.count
+    
+    def __str__(self):
+      return  f"total trucks are {truck.counter()}"
+    def __len__(self): 
+        return truck.count
+truck1= truck('harsh')
+
+truck2= truck("varun")
+print(len(truck1))
+print(truck1)
