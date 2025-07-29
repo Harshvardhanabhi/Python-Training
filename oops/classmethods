@@ -1,0 +1,52 @@
+# from math import pi
+# class calci:
+#     def __init__(self, r):
+#         self.radius = r
+#         print(f'radius is {self.radius}')
+#     @classmethod
+#     def convo(cls,r):
+       
+#        para= 2*pi*r
+#        return para
+   
+# r1=calci(5)
+
+
+# a=calci.convo(r1.radius)
+# print(f'parameter is {a}')
+
+# class Date:
+#     def __init__(self, year, month, day):
+#         self.year = year
+#         self.month = month
+#         self.day = day
+
+#     @classmethod
+#     def from_string(cls, date_string):
+#         # The class method processes the input
+#         year, month, day = map(int, date_string.split('-'))
+        
+#         # Then, it calls the __init__ method (via cls()) to create the instance
+#         return cls(year, month, day) 
+
+# date_from_string = Date.from_string("2024-07-29")
+# print(f"Year: {date_from_string.year}, Month: {date_from_string.month}, Day: {date_from_string.day}")
+
+
+
+
+class calci:
+    def __init__(self, area):
+        self.area = area
+        
+        print(f'area is {self.area}')
+    @staticmethod
+    def convo(l ,b ):
+       
+       area = l*b
+       return calci(area)
+   
+
+
+r1= calci.convo(3,4)
+
