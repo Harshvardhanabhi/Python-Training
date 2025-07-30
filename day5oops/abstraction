@@ -1,0 +1,91 @@
+# from abc import ABC , abstractmethod
+# from math import pi
+# class shape(ABC) :
+#     @abstractmethod
+    
+#     def __init__(self,shape):
+#         self.shape=shape
+#         print(f'the shape is {self.shape}')
+    
+    
+    
+#     def area(self):
+#         pass
+   
+    
+    
+# class rectangle(shape):
+    
+#     def __init__(self, shape, l , b):
+#        super().__init__(shape)
+#        self.l=l
+#        self.b=b
+       
+#     def area(self):
+#            A=self.l*self.b 
+           
+#            return A
+# class circle(shape):
+    
+#     def __init__(self, shape,r):
+#         super().__init__(shape)
+        
+#         self.r=r
+        
+#     def area(self):
+#         A=pi*self.r*self.r
+        
+#         return A
+
+
+# c1=circle('circle',5)
+# print(c1.area())
+
+
+
+
+# without @abstractmehod
+
+from abc import ABC 
+from math import pi
+class shape(ABC) :
+    def __init__(self,shape):
+        self.shape=shape
+        print(f'the shape is {self.shape}')
+    
+
+    
+    def area(self):
+        pass
+   
+    
+    
+class rectangle(shape):
+    
+    def __init__(self, shape, l , b):
+       super().__init__(shape)
+       self.l=l
+       self.b=b
+       
+    def area(self):
+           A=self.l*self.b 
+           
+           return A
+class circle(shape):
+    
+    def __init__(self, shape,r):
+        super().__init__(shape)
+        
+        self.r=r
+        
+    def area(self):
+        A=pi*self.r*self.r
+        
+        return A
+
+c2=shape('square')
+c1=circle('circle',5)
+print(c1.area())
+
+
+# # the main difffernce is we can't call objects with using @abstactmethod in class
