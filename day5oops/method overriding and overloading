@@ -1,0 +1,77 @@
+# tax = 200
+# pf = 500
+
+# class Employee:
+#     def get_salary(self): 
+#         return f"Base salary is {self.base_salary}" 
+
+# class Cut(Employee):
+#     def get_salary(self, tax_amount, pf_amount): 
+#         in_hand = self.base_salary - tax_amount - pf_amount 
+      
+#         return in_hand
+
+# e1 = Cut()
+# e1.base_salary = 4000  
+
+# e1.get_salary(tax, pf)
+
+
+
+# class Animal:
+#     def speak(self):
+#         print("This animal makes a sound.")
+
+# class Dog(Animal):
+#     def speak(self):
+#         super().speak()  # Calls Animal's speak method
+#         print("The dog barks: Woof woof!")
+
+# dog_obj = Dog()
+# dog_obj.speak()
+
+
+
+# class Parent:
+#     def __init__(self, name):
+#         self.name = name
+#         print(f"Parent initialized: {self.name}")
+
+# class Child(Parent):
+#     def __init__(self, name, age):
+#         super().__init__(name)  # Calls Parent's __init__
+#         self.age = age
+#         print(f"Child initialized: {self.name}, Age: {self.age}")
+
+# child_obj = Child("Alice", 10)
+
+# #method overloading using *kwargs
+# class Calculator:
+#     def __init__(self, *numbers):
+#         self.numbers = numbers
+#         self.total = sum(numbers)
+
+# # Initialize with different numbers of arguments
+# calc1 = Calculator(1, 2)
+# print(f"Numbers: {calc1.numbers}, Total: {calc1.total}") 
+
+# calc2 = Calculator(1, 2, 3, 4)
+# print(f"Numbers: {calc2.numbers}, Total: {calc2.total}") 
+
+
+# 2
+class DataProcessor:
+    
+    def __init__(self,*args, **kwargs):
+        self.args=args
+        self.kwargs=kwargs
+    def process_data(self):
+        if self.args:
+            print("Processing positional arguments:", self.args)
+        if self.kwargs:
+            print("Processing keyword arguments:", self.kwargs)
+
+processor = DataProcessor(1,2)
+processor1 = DataProcessor(name='harsh',age=19)
+processor1.process_data()
+processor.process_data()
