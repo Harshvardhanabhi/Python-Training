@@ -1,0 +1,43 @@
+# Create abstract class DataProcessor with method process().
+
+
+# Inherit it in CSVProcessor, JSONProcessor with custom process() logic.
+
+
+# Use a loop to call process() on different processor objects.
+
+from abc import ABC,abstractmethod
+
+class  dataprocessor(ABC):
+    l=[]
+    def __init__(self,name):
+        
+        self.l.append(self)
+        self.name=name 
+    @abstractmethod
+    
+    def process(self):
+        pass
+    
+class csvprocessor(dataprocessor):
+    def __init__(self, name):
+        self.name=name
+        super().__init__(name)
+    def process(self):
+        
+        return  f'name of current processor is {self.name}'  
+class  JSONProcessor(dataprocessor):
+    def process(self):
+        
+        return f'the proceesor name is {self.name}'
+   
+j1=JSONProcessor('hash')
+
+
+c1=csvprocessor('cat')
+
+j2=JSONProcessor('varun')
+for i in dataprocessor.l: 
+    print(i.process())
+
+
