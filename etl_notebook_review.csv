@@ -1,0 +1,57 @@
+Cell #,Stage,Snippet (first 3 lines),Suggestions
+1,Other,"import pandas as pd
+import numpy as np",—
+2,Extract,df = pd.read_json('fake_property_data.json'),—
+3,Other,df.head(),—
+4,Env/Deps,pip install pandas openpyxl,"Move `pip install` to requirements.txt and install once, not in notebook."
+5,Extract,df2 = pd.read_excel('Field Config.xlsx'),—
+6,Other,df2,—
+7,Transform,df.describe(include='all'),—
+8,Transform,df.info(),—
+9,Transform,to_drop=df.isnull().sum()*100/len(df),—
+10,Other,to_drop,—
+11,Other,(empty cell),—
+12,Other,df.columns,—
+13,Other,cols_to_drop,—
+14,Other,df.shape,—
+15,Other,cols_to_drop = to_drop[to_drop > 30].index,—
+16,Transform,"filter_df = df.drop(columns=cols_to_drop, errors='ignore')",—
+17,Other,filter_df,—
+18,Transform,new_corr= filter_df.select_dtypes(include=['int64' and 'float64']),—
+19,Transform,new_corr.corr(),—
+20,Transform,filter_df.isnull().sum(),—
+21,Other,mode_value= filter_df['Parking'].mode(),—
+22,Other,mode_value,—
+23,Transform,"filter_df['Parking'].fillna(mode_value, inplace=True)",—
+24,Other,"mode_value2= filter_df['Selling_Reason'].mode()[0]
+mode_value2",—
+25,Transform,"filter_df['Selling_Reason'].fillna(mode_value2, inplace=True)",—
+26,Other,"mode_value3= filter_df['Layout'].mode()[0]
+mode_value3",—
+27,Transform,"filter_df['Layout'].fillna(mode_value3, inplace=True)",—
+28,Transform,filter_df.isnull().sum(),—
+29,Other,mode_value2= filter_df['Parking'].mode()[0],—
+30,Other,mode_value2,—
+31,Transform,"filter_df['Parking'].fillna(mode_value2, inplace=True)",—
+32,Transform,filter_df.isnull().sum(),—
+33,Other,filter_df.head(),—
+34,Transform,filter_df.info(),—
+35,Other,filter_df.columns,—
+36,Transform,new = filter_df.select_dtypes(include=['int64' and 'float64']),—
+37,Transform,new.corr(),—
+38,Transform,"filter_df.replace(' ',np.nan,inplace=True)",—
+39,Transform,"filter_df.replace('Null', np.nan, inplace=True)",—
+40,Transform,filter_df.isnull().sum(),—
+41,Transform,filter_df.info(),—
+42,Other,mode_v= filter_df['Reviewed_Status'].mode()[0],—
+43,Transform,"filter_df['Reviewed_Status'].fillna(mode_v, inplace=True)",—
+44,Other,mode_= filter_df['Most_Recent_Status'].mode()[0],—
+45,Transform,"filter_df['Most_Recent_Status'].fillna(mode_, inplace=True)",—
+46,Other,mode2_= filter_df['Market'].mode()[0],—
+47,Transform,"filter_df['Market'].fillna(mode_v, inplace=True)",—
+48,Transform,filter_df.isnull().sum(),—
+49,Other,filter_df.head(),—
+50,Other,df2,—
+51,Transform,g_df= df2.groupby('Target Table')['Column Name'].count(),—
+52,Other,g_df,—
+53,Other,(empty cell),—
